@@ -26,22 +26,64 @@
             position: relative;
             transition: transform 4s ease-out;
         }
-        .switch {
+        .wheel div {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-color: red;
+            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        }
+        .wheel div:nth-child(2) { transform: rotate(45deg); background-color: blue; }
+        .wheel div:nth-child(3) { transform: rotate(90deg); background-color: green; }
+        .wheel div:nth-child(4) { transform: rotate(135deg); background-color: yellow; }
+        .wheel div:nth-child(5) { transform: rotate(180deg); background-color: purple; }
+        .wheel div:nth-child(6) { transform: rotate(225deg); background-color: orange; }
+        .wheel div:nth-child(7) { transform: rotate(270deg); background-color: pink; }
+        .wheel div:nth-child(8) { transform: rotate(315deg); background-color: cyan; }
+        .wheel span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: white;
+        }
+        .money {
+            font-size: 24px;
             margin: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="wheel" id="wheel"></div>
+        <div class="money" id="money">$100</div>
+        <div class="wheel" id="wheel">
+            <div><span>1</span></div>
+            <div><span>2</span></div>
+            <div><span>3</span></div>
+            <div><span>4</span></div>
+            <div><span>5</span></div>
+            <div><span>6</span></div>
+            <div><span>7</span></div>
+            <div><span>8</span></div>
+        </div>
         <button class="switch" onclick="spinWheel()">Spin the Wheel</button>
     </div>
 
     <script>
+        let money = 100;
+
         function spinWheel() {
             const wheel = document.getElementById('wheel');
             const randomDegree = Math.floor(Math.random() * 360);
             wheel.style.transform = `rotate(${randomDegree}deg)`;
+
+            const segment = Math.floor(randomDegree / 45) + 1;
+            const winnings = segment * 10;
+            money += winnings;
+            document.getElementById('money').innerText = `$${money}`;
         }
     </script>
 </body>
