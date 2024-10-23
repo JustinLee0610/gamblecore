@@ -1,5 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambling Wheel</title>
+    <style>
+        body {
+            background-image: url('background.jpg'); /* Replace with your background image */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .wheel {
+            width: 200px;
+            height: 200px;
+            border: 5px solid #000;
+            border-radius: 50%;
+            margin: 20px auto;
+            position: relative;
+            transition: transform 4s ease-out;
+        }
+        .switch {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wheel" id="wheel"></div>
+        <button class="switch" onclick="spinWheel()">Spin the Wheel</button>
+    </div>
 
-<h1>Gamblecore</h1>
-
+    <script>
+        function spinWheel() {
+            const wheel = document.getElementById('wheel');
+            const randomDegree = Math.floor(Math.random() * 360);
+            wheel.style.transform = `rotate(${randomDegree}deg)`;
+        }
+    </script>
+</body>
 </html>
