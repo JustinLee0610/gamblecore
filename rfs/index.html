@@ -1,1 +1,82 @@
+<head>
+  <title>RFS</title>
+  <link rel="icon" type="image/x-icon" href="imgs/Rocket.png">
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<div class="intro" id="intro">
+  <h1>
+    Rice Farming Simulator
+  </h1>
+  <h4>A minimalistic history game for students</h4>
+  <h6>(I was forced to make this)</h6>
+  <span>Name:</span>
+  <input autocomplete="off" type="text" id="name" name="name">
+  <div class="introstory" id="introstory">
+    <p id="sttxt">Your name is Ned Chang. Born as a rice farmer, your only goal in life is to make China number one.</p>
+    <button class="cont btn" onclick="toggle(intro,false); toggle(game,true,'inline'); stats.didIntro = true;">Continue</button>
+  </div>
+</div>
+
+<div class="game" id="game">
+
+  <div class="bottom">
+    <button class="mode" onclick="popup(true,'akhil','akhil: Hoo hah? <img style=\'width: auto; height: 50px; display: block; margin: auto;\' src=\'https://rfs.bobulesence.repl.co/imgs/monkey.png\'> <button class=\'btn\' onclick=\'closepopups();\'>Close all popups</button> <button class=\'btn\' onclick=\'clearAll();\'>Clear Data</button>')">
+      <img src="https://iconarchive.com/download/i90049/icons8/windows-8/Astrology-Year-Of-Monkey.ico">
+    </button>
+  </div>
+
+  <canvas class="wanted" id="wanted" width="300" height="52"></canvas>
+<div class="popup" id="popup">
+    <div class="top">
+      <h1 class="title" id="title">Title</h1>
+      <btn class="close btn" id="closebtn">X</btn>
+    </div>
+    <p class="desc" id="desc">Desc</p>
+</div>
+
+<div class="launchui">
+  <img src="https://rfs.bobulesence.repl.co/imgs/wm.png" class="lmap">
+  <div class="lcursor" id="lcursor"></div>
+</div>
+
+  <h1 id="rtitle">
+    Rice Farming Simulator
+  </h1>
+  <h4>A minimalistic history game for students</h4>
+  <h6>(I was forced to make this)</h6>
+  <button class="farm btn" id="farmbtn" onclick="farm()">
+    Farm Rice
+  </button>
+  <button class="sell btn" id="sellbtn" onclick="sell()">
+    Sell Rice
+  </button>
+  <button class="buy btn" id="buybtn" onclick="buy(1)">Buy PF-98 Unguided Anti-Tank Rocket</button>
+  <button class="buy2 btn" id="buy2btn" onclick="buy(2)">Buy HJ-10 Ground-Launched Guided Anti-Tank Missile</button>
+  <button class="launch btn" id="launchbtn" onclick="launch(1)">Launch IBM</button>
+  <button class="launch btn" id="launch2btn" onclick="launch(2)">Launch HGM</button>
+
+  <div class="stats">
+    <div class="rice amt" id="riceamt">Rice: 0</div>
+    <div class="money amt" id="moneyamt">Money: 0元</div>
+    <div class="ibm amt" id="ibmamt">Intercontinental Ballistic Missiles: 0</div>
+    <div class="hgm amt" id="hgmamt">Heat Guided Missiles: 0</div>
+    <div class="ce amt" id=ceamt>Countries exploded: 0</div>
+    <div class="cl amt" id=clamt>Countries left: 0</div>
+  </div>
+
+  <div class="gstats">
+    <hr>
+    <div class="rpc amt" id="rpcamt">Rice per click: 1</div>
+    <div class="mpr amt" id="mpramt">Money per rice: 1元</div>
+  </div>
+
+</div>
+
+<!-- script src="bm.js"></script> -->
+
+
+<script src="drag.js"></script>
+<script src="countries.js"></script>
+<script src="game.js"></script>
+<!-- script src="bm.js"></script> -->
