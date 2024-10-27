@@ -166,10 +166,12 @@ function drink() {
 }
 
 function play() {
+  alert("plz work")
   switchWindow(gameFrame)
   if (playButton.innerHTML == "🙂 begin addiction") {
     setTimeout(function () {
       playButton.innerHTML = "🙂 continue addiction"
     }, 600)
   }
+  alert("should have worked")
 }
