@@ -1,3 +1,5 @@
+alert("aaaaa")
+
 const root = document.querySelector(":root")
 const introFrame = document.querySelector(".intro")
 const helpFrame = document.querySelector(".help")
