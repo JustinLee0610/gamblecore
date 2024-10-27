@@ -1,0 +1,140 @@
+:root {
+  --mainbg: rgb(240, 240, 240);
+  --uibg: white;
+  --uiborder: rgb(200, 200, 200);
+  --uiInner: rgb(250, 250, 250);
+  --text: black;
+}
+
+/* ------------------------------------------ */
+
+body {
+  margin: 0;
+  background: var(--mainbg);
+  transition-property: background, color;
+  transition-duration: 0.25s;
+  color: var(--text);
+  font-family: "Product Sans";
+}
+
+h1 {
+  font-size: 20px;
+  margin-top: 0px;
+}
+
+button {
+  all: unset;
+  padding: 10px;
+  background: var(--uiInner);
+  border-radius: 5px;
+  border: 1px solid var(--uiborder);
+  cursor: pointer;
+  margin: 5px;
+  transition-property: background, box-shadow, border, transform;
+  transition-duration: 0.25s;
+}
+
+button:hover {
+  transform: translate(0, -3px);
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+  transform: translate(0, 0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  transition: 0s;
+}
+
+/* ------------------------------------------ */
+
+.hidden {
+  display: none;
+}
+
+.uiFrame {
+  background: var(--uibg);
+  border: 1px solid var(--uiborder);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+  transition-property: background, box-shadow, border;
+  transition-duration: 0.25s;
+  position: fixed;
+}
+
+/* ------------------------------------------ */
+
+.intro {
+  text-align: center;
+}
+
+.gameFrame {
+  position: fixed;
+}
+
+.mainGameFrame {
+  position: fixed;
+  width: calc(100vw - 70px);
+  height: calc(100vh - 135px);
+}
+
+.statsFrame {
+  position: fixed;
+  bottom: 10px;
+  width: calc(100vw - 70px);
+  height: 10px;
+}
+
+.statsFrame > * {
+  display: inline-block;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 0px;
+  background: var(--uiInner);
+  border-radius: 100px;
+  border: 1px solid var(--uiborder);
+  transition: background 0.25s, box-shadow 0.25s, border 0.25s, transform 0.1s;
+  transform: translateY(calc(-50% + 5px));
+}
+
+.statBar {
+  float: right;
+  line-height: 0;
+  background: var(--uiInner);
+  border-radius: 100px;
+  border: 1px solid var(--uiborder);
+  padding: 15px;
+  margin-left: 5px;
+}
+
+.help > a {
+  display: block;
+  margin: 10px;
+}
+
+.PlayButton {
+  background: rgb(50, 200, 100);
+  border: 1px solid rgb(0, 175, 90);
+}
+
+/* ------------------------------------------ */
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
