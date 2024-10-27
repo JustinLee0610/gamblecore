@@ -1,5 +1,3 @@
-alert("aaaaa")
-
 const root = document.querySelector(":root")
 const introFrame = document.querySelector(".intro")
 const helpFrame = document.querySelector(".help")
@@ -166,12 +164,10 @@ function drink() {
 }
 
 function play() {
-  alert("plz work")
   switchWindow(gameFrame)
   if (playButton.innerHTML == "🙂 begin addiction") {
     setTimeout(function () {
       playButton.innerHTML = "🙂 continue addiction"
     }, 600)
   }
-  alert("should have worked")
 }
