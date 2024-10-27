@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://sethusenthil.com/Product-Sans/api/font.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="src/index.js"></script>
+  </head>
+
+  <body>
+    <div class="intro uiFrame">
+      <h1>🍚 rice gambling simulator 🎰</h1>
+      <button onclick="play()" class="PlayButton">🙂 begin addiction</button>
+    </div>
+    <div class="gameFrame hidden">
+      <div class="mainGameFrame uiFrame">
+        <h1>🍚 rice gambling simulator 🎰 - the game</h1>
+        <button onclick="gamble()">🎰 gamble</button>
+        <button onclick="eat()">🍽️ eat</button>
+        <button onclick="drink()">🍾 get wasted</button>
+        <button onclick="toggleTheme()">⚙️ toggle theme</button>
+        <button onclick="switchWindow(helpFrame)">❔ help</button>
+        <button onclick="switchWindow(aboutFrame)">💬 about</button>
+        <button onclick="switchWindow(introFrame)">🖕 back</button>
+      </div>
+      <div class="statsFrame uiFrame">
+        <a>🍚: 0</a>
+        <a>🍜: 0</a>
+        <a>🥟: 0</a>
+        <a>🐕: 0</a>
+        <a>🍾: 0</a>
+        <a>💰: 0</a>
+        <div class="statBar">🥴🍷 drunkness: 0%</div>
+        <div class="statBar">🍽️ hunger: 100%</div>
+      </div>
+    </div>
+    <div class="help uiFrame hidden">
+      <h1>🍚 rice gambling simulator 🎰 - help</h1>
+      <button onclick="switchWindow(gameFrame)">🖕 back</button>
+      <a>- 🍚 rice - 1/10 chance</a>
+      <a>- 🍜 noodles - 1/20 chance</a>
+      <a>- 🥟 dumplings - 1/50 chance</a>
+      <a>- 🐕😋 dog - 1/100 chance</a>
+      <a>- 🍾 alcohol - 1/500 chance</a>
+      <a
+        >- 🍽️ hunger - reach 0% and you die... eating food replenishes this but
+        also has a low chance to decrease drunkness</a
+      >
+      <a
+        >- 🥴🍷 drunkness - the more drunk you are the more lucky you are...
+        drinking is very good for you!</a
+      >
+    </div>
+    <div class="about uiFrame hidden">
+      <h1>🍚 rice gambling simulator 🎰 - about</h1>
+      <button onclick="switchWindow(gameFrame)">🖕 back</button>
+      <p>
+        <br />from the screen to the ring to the pen to the king wheres my crown
+        thats my bling always drama when i ring see i believe that if i see it
+        in my heart smash through the ceiling cause im reaching for the stars
+        woah oh oh this is how the story goes woah oh oh i guess this is how the
+        story goes im in the thick of it everybody knows
+      </p>
+    </div>
+  </body>
+</html>
